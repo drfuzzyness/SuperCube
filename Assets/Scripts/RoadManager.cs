@@ -28,7 +28,7 @@ public class RoadManager : MonoBehaviour {
 	}
 
 	void generateTile() {
-		Instantiate( roadTile, previousPosition + roadTileSize, roadTile.transform.rotation );
+		Instantiate( roadTile, previousPosition + Vector3.forward * roadTileSize.z, roadTile.transform.rotation );
 		previousPosition.z += roadTileSize.z;
 	}
 }
